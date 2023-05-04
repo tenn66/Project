@@ -1,9 +1,14 @@
 package com.github.vitalliuss.helloci;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class HurtMePlenty {
     WebDriver driver;
@@ -57,20 +62,21 @@ public class HurtMePlenty {
 
     public HurtMePlenty(WebDriver driver){
         this.driver=driver;
+        PageFactory.initElements(driver, this);
     }
-    public void Compute_Engine(String st) throws InterruptedException {
+    public void NoOfInstance() throws InterruptedException {
         JavascriptExecutor jsexecutor = (JavascriptExecutor) driver;
         jsexecutor.executeScript("window.scrollBy(0,300)", "");
         Thread.sleep(2000);
 
         driver.switchTo().frame(0);
-        // 8 | selectFrame | index=0 |
         driver.switchTo().frame(0);
         instance.click();
         Thread.sleep(2000);
-        instance.sendKeys(st);
+        instance.sendKeys("4");
+        Thread.sleep(2000);
     }
-    public void OS() throws InterruptedException {
+    public void setOS() throws InterruptedException {
         os1.click();
         Thread.sleep(2000);
         os2.click();
@@ -133,5 +139,19 @@ public class HurtMePlenty {
     public void Estimate() throws InterruptedException {
         estimate.click();
         Thread.sleep(2000);
+    }
+    public void takeScreenshot(WebDriver driver) throws IOException
+    {
+        // Create the screenshot object
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        // Take the screenshot as a file
+        File source = screenshot.getScreenshotAs(OutputType.FILE);
+        // Create a destination file with the current date and time as the filename
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        String fileName = "screenshot" + dateFormat.format(new Date()) + ".png";
+        File destination = new File("/Users/tenzinwangmo/Desktop/JLPT" + fileName);
+        // Copy the source file to the destination file
+        FileUtils.copyFile(source, destination);
+        System.out.println("Screenshot taken and saved to: " + source + "  --->  "+ destination);
     }
 }

@@ -10,6 +10,7 @@ public class HomePage {
     @FindBy( xpath= "/html/body/section/devsite-header/div/div[1]/div/div/div[2]/devsite-search/form/div[1]/div/input")
     WebElement search;
     @FindBy( xpath = "//*[@id=\"___gcse_0\"]/div/div/div/div[5]/div[2]/div/div/div[1]/div[1]/div[1]/div[1]/div/a/b")
+                      //*[@id="___gcse_0"]/div/div/div/div[5]/div[2]/div/div/div[1]/div[1]/div[1]/div[1]/div/a/b
     WebElement calpage;
 
     public HomePage(WebDriver driver){
@@ -26,8 +27,12 @@ public class HomePage {
     }
     public void CalPage() throws InterruptedException {
         calpage.click();
-        Thread.sleep(2000);
-
+        Thread.sleep(5000);
+    }
+    public void closeDrive()
+    {
+        driver.close();
+        driver.quit();
     }
 
 }
