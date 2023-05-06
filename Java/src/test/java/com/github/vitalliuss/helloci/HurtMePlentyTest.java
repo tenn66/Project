@@ -96,8 +96,7 @@ public class HurtMePlentyTest {
             }
         }
     }
-
-    /*
+/*
     @Test
     public void AddEstimate() throws InterruptedException {
         WebDriver driver = FactoryBrowser.setupBrowser("chrome","https://cloud.google.com/");//we can directly call the class because its static
@@ -124,4 +123,6 @@ public class HurtMePlentyTest {
     }
 
      */
+
+
 }

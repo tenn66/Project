@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/tenzinwangmo/IdeaProjects/helloci/Java/src/test/java/com/github/vitalliuss/helloci/HurtMePlentyTest.java">
+        <classes>
+            <class name="com.github.vitalliuss.helloci.HurtMePlentyTest">
+                <methods>
+                    <include name="environment"/>
+                    <include name="homePageTest"/>
+                    <include name="NoOfInstance"/>
+                    <include name="OS"/>
+                    <include name="VM_Class"/>
+                    <include name="Series"/>
+                    <include name="Instance_Type"/>
+                    <include name="GPU"/>
+                    <include name="Local_SSD"/>
+                    <include name="Location"/>
+                    <include name="usage"/>
+                    <include name="Estimate"/>
+                    <include name="closeDriver"/>
+
+                </methods>
+            </class>
+            <class name="com.github.vitalliuss.helloci.ICanWinTest">
+                <methods>
+                    <include name="NewPaste"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite>
