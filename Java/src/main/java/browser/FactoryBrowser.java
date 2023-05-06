@@ -19,6 +19,5 @@ public class FactoryBrowser {
         driver.manage().window().maximize();
         return driver;
     }
-
 }
 
