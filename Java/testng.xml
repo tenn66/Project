@@ -4,6 +4,11 @@
     <test verbose="2" preserve-order="true"
           name="/Users/tenzinwangmo/IdeaProjects/helloci/Java/src/test/java/com/github/vitalliuss/helloci/HurtMePlentyTest.java">
         <classes>
+            <class name="com.github.vitalliuss.helloci.ICanWinTest">
+                <methods>
+                    <include name="NewPaste"/>
+                </methods>
+            </class>
             <class name="com.github.vitalliuss.helloci.HurtMePlentyTest">
                 <methods>
                     <include name="environment"/>
@@ -22,12 +27,6 @@
 
                 </methods>
             </class>
-            <class name="com.github.vitalliuss.helloci.ICanWinTest">
-                <methods>
-                    <include name="NewPaste"/>
-                </methods>
-            </class>
         </classes>
-
     </test>
 </suite>
