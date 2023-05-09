@@ -3,6 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
           name="/Users/tenzinwangmo/IdeaProjects/helloci/Java/src/test/java/com/github/vitalliuss/helloci/HurtMePlentyTest.java">
+
         <classes>
             <class name="com.github.vitalliuss.helloci.ICanWinTest">
                 <methods>
